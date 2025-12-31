@@ -2,14 +2,12 @@
 version: "3"
 services:
  devopsdb:
-   container_name: devopsdb
    image: prasanthiandela/mynewapp:dbimg
    ports:
      - "3306:3306"
 
  application:
    image: prasanthiandela/mynewapp:appimg
-   container_name: containerapp
    ports:
      - "1234:8080"
    depends_on:
